@@ -21,10 +21,10 @@ jobs:
         uses: actions/setup-node@v4 # Actualizado a v4
         with:
           node-version: 20
-          cache: 'npm' # Opcional: acelera tus builds
+          cache: 'npm'
 
       - name: Astro build
-        uses: withastro/action@v2 # ¡Importante! Actualizado a v2 para soporte de v4 artifacts
+        uses: withastro/action@v2 # ¡CLAVE! Actualizado a v2 para usar los nuevos artifacts
         with:
           package-manager: npm
 
