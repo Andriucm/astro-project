@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -36,7 +37,7 @@ import Layout from "../../layouts/Layout.astro";
 			<li>Notas de calidad de codigo para equipos en crecimiento.</li>
 		</ul>
 		<p>
-			Quieres empezar? Visita la seccion de <a href="/es/blog/">blog</a> y explora los ejemplos.
+			Quieres empezar? Visita la seccion de <a href={getRelativeLocaleUrl("es", "/blog")}>blog</a> y explora los ejemplos.
 		</p>
 	</section>
 </Layout>

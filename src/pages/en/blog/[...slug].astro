@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { getCollection, type CollectionEntry } from "astro:content";
 import type { GetStaticPaths } from "astro";
 import Layout from "../../../layouts/Layout.astro";
@@ -27,7 +28,7 @@ const { Content } = await post.render();
 
 <Layout title={post.data.title}>
 	<article class="post-view">
-		<a class="back" href="/en/blog/">Back to blog</a>
+		<a class="back" href={getRelativeLocaleUrl("en", "/blog")}>Back to blog</a>
 		<h1>{post.data.title}</h1>
 		<p class="excerpt">{post.data.excerpt}</p>
 		<Content />

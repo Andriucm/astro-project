@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -36,7 +37,7 @@ import Layout from "../../layouts/Layout.astro";
 			<li>Code quality practices for growing engineering teams.</li>
 		</ul>
 		<p>
-			Ready to start? Visit the <a href="/en/blog/">blog section</a> and explore the examples.
+			Ready to start? Visit the <a href={getRelativeLocaleUrl("en", "/blog")}>blog section</a> and explore the examples.
 		</p>
 	</section>
 </Layout>

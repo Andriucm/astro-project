@@ -29,7 +29,7 @@ const links: Record<"es" | "en", NavLink[]> = {
 			text: "Blog",
 		},
 		{
-			link: "/en/",
+			link: getRelativeLocaleUrl("en", "/"),
 			text: "EN",
 		},
 	],
@@ -47,7 +47,7 @@ const links: Record<"es" | "en", NavLink[]> = {
 			text: "Blog",
 		},
 		{
-			link: "/es/",
+			link: getRelativeLocaleUrl("es", "/"),
 			text: "ES",
 		},
 	],

@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/Card.astro";
@@ -15,8 +16,8 @@ const posts: CollectionEntry<"blog">[] = await getCollection("blog", ({ id }: { 
 			want to move fast without sacrificing quality.
 		</p>
 		<div class="actions">
-			<a class="button-link" href="/en/blog/">Explore all articles</a>
-			<a class="ghost" href="/en/about/">About this project</a>
+			<a class="button-link" href={getRelativeLocaleUrl("en", "/blog")}>Explore all articles</a>
+			<a class="ghost" href={getRelativeLocaleUrl("en", "/about")}>About this project</a>
 		</div>
 	</section>
 
