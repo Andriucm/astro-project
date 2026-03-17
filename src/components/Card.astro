@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 type Props = {
 	slug: string;
 	title: string;
@@ -11,7 +12,7 @@ const { slug, title, excerpt } = Astro.props as Props;
 
 <article class="post-card">
 	<h2>
-		<a href={`/${lang}/blog/${slug}`}>{title}</a>
+		<a href={getRelativeLocaleUrl(lang, `/blog/${slug}`)}>{title}</a>
 	</h2>
 	<p>{excerpt}</p>
 	<a class="read-more" href={`/${lang}/blog/${slug}`}>
